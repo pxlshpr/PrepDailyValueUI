@@ -53,18 +53,15 @@ struct MicroSettings: View {
                 }
                 switch type {
                 case .preset:
-                    HStack {
-                        Text("Preset")
-                        Spacer()
-                        NavigationLink {
-                            DailyValuePicker(micro: micro)
-                        } label: {
-                            HStack {
-                                Spacer()
-                                Text("Choose")
-                            }
-                            .foregroundStyle(.tertiary)
+                    NavigationLink {
+                        DailyValuePicker(micro: micro)
+                    } label: {
+                        HStack {
+                            Text("Preset")
+                            Spacer()
+                            Text("Choose")
                         }
+                        .foregroundStyle(.tertiary)
                     }
                 case .custom:
                     HStack {
