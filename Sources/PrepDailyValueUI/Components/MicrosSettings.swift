@@ -1,8 +1,13 @@
 import SwiftUI
 import PrepShared
 
-struct MicrosSettings: View {
-    var body: some View {
+public struct MicrosSettings: View {
+    
+    public init() {
+        
+    }
+    
+    public var body: some View {
         NavigationStack {
             Form {
                 ForEach(MicroGroup.allCases, id: \.self) { group in
