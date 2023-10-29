@@ -85,10 +85,11 @@ struct MicroSettings: View {
                     } label: {
                         HStack {
                             Text("RDI")
+                                .foregroundStyle(.primary)
                             Spacer()
                             Text("Choose")
+                                .foregroundStyle(.tertiary)
                         }
-                        .foregroundStyle(.tertiary)
                     }
                 case .custom:
                     HStack {
