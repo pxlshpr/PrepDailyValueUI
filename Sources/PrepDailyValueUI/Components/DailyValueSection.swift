@@ -1,6 +1,6 @@
 import SwiftUI
 import PrepShared
-import PrepBiometrics
+import PrepSettings
 import PrepDailyValue
 
 struct DailyValueSection: View {

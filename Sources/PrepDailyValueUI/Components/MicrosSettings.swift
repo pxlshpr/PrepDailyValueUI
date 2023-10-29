@@ -1,8 +1,11 @@
 import SwiftUI
 import PrepShared
+import PrepSettings
 
 public struct MicrosSettings: View {
     
+    @Environment(SettingsStore.self) var settingsStore: SettingsStore
+
     public init() {
         
     }
@@ -14,7 +17,7 @@ public struct MicrosSettings: View {
                     Section(group.name) {
                         ForEach(group.micros, id: \.self) { micro in
                             NavigationLink {
-                                MicroSettings(micro: micro)
+                                MicroSettings(micro, settingsStore)
                             } label: {
                                 Text(micro.name)
                             }

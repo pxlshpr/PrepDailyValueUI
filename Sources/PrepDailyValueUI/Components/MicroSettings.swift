@@ -1,19 +1,47 @@
 import SwiftUI
 import PrepShared
 import PrepDailyValue
+import PrepSettings
+
+extension Settings {
+    mutating func setIsDisplayed(for micro: Micro, to isDisplayed: Bool) {
+        switch isDisplayed {
+        case true:
+            guard !displayedMicros.contains(micro) else { return }
+            displayedMicros.append(micro)
+        case false:
+            guard displayedMicros.contains(micro) else { return }
+            displayedMicros.removeAll(where: { $0 == micro })
+        }
+    }
+}
 
 struct MicroSettings: View {
     
     let micro: Micro
-    
-    @State var isDisplayed: Bool = true
+    @Bindable var settingsStore: SettingsStore
+
+//    @State var isDisplayed: Bool = true
     @State var useDailyValue: Bool = true
     @State var type: DailyValueType = .default
 
+    
+    init(_ micro: Micro, _ settingsStore: SettingsStore) {
+        self.micro = micro
+        self.settingsStore = settingsStore
+    }
+    
+    var isDisplayed: Binding<Bool> {
+        Binding<Bool>(
+            get: { settingsStore.settings.displayedMicros.contains(micro) },
+            set: { settingsStore.settings.setIsDisplayed(for: micro, to: $0) }
+        )
+    }
+    
     var body: some View {
         Form {
             Section {
-                Toggle(isOn: $isDisplayed, label: {
+                Toggle(isOn: isDisplayed, label: {
                     Text("Show")
                 })
             }

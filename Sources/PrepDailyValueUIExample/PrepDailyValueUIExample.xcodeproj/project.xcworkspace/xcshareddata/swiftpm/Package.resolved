@@ -19,30 +19,30 @@
       }
     },
     {
-      "identity" : "prepbiometrics",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/pxlshpr/PrepBiometrics",
-      "state" : {
-        "revision" : "130b0a727024d5cd14bcc3dcae546e06af4a4af7",
-        "version" : "0.0.11"
-      }
-    },
-    {
-      "identity" : "prepbiometricsui",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/pxlshpr/PrepBiometricsUI",
-      "state" : {
-        "revision" : "ad6bb88f042f4a75b194e4ce414ba189eacdf326",
-        "version" : "0.0.1"
-      }
-    },
-    {
       "identity" : "prepdailyvalue",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pxlshpr/PrepDailyValue",
       "state" : {
-        "revision" : "f82ac475d1feff85d80ea455c8f1772e65c90ff9",
-        "version" : "0.0.8"
+        "revision" : "7430843d95391e98641f75188b514dbf75d6bd34",
+        "version" : "0.0.9"
+      }
+    },
+    {
+      "identity" : "prepsettings",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pxlshpr/PrepSettings",
+      "state" : {
+        "revision" : "2cb023071b33bb27ee65fcbc3d4b82b82e1fb2c8",
+        "version" : "0.0.1"
+      }
+    },
+    {
+      "identity" : "prepsettingsui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pxlshpr/PrepSettingsUI",
+      "state" : {
+        "revision" : "e9a5d20085978c15cd1da04b9228c3d63332cbd1",
+        "version" : "0.0.1"
       }
     },
     {
@@ -50,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pxlshpr/PrepShared",
       "state" : {
-        "revision" : "627582f2449536c780f10a8c1c068d9e4b948413",
-        "version" : "0.0.139"
+        "revision" : "d1d558fa3b04148a7b7f39057451c2b988293495",
+        "version" : "0.0.141"
       }
     },
     {
