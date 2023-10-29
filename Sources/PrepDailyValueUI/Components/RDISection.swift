@@ -1,12 +1,11 @@
 import SwiftUI
 import PrepShared
 import PrepSettings
-import PrepDailyValue
 
-struct DailyValueSection: View {
+struct RDISection: View {
     
-    @Environment(DailyValuePicker.Model.self) var model: DailyValuePicker.Model
-    let dailyValue: DailyValue
+    @Environment(RDIPicker.Model.self) var model: RDIPicker.Model
+    let rdi: RDI
     
     @State var isSmoker: PickableBool = .notSpecified
     @State var isPregnant: PickableBool = .notSpecified
@@ -25,7 +24,7 @@ struct DailyValueSection: View {
     //TODO: use this to handle URL https://www.hackingwithswift.com/quick-start/swiftui/how-to-customize-the-way-links-are-opened
     @ViewBuilder
     var footer_: some View {
-        if let source = dailyValue.source, let url = dailyValue.url {
+        if let source = rdi.source, let url = rdi.url {
 //                Text("Source: [\(source.abbreviation)] \(url)")
             Text("Source: [\(source.abbreviation)](\(url))")
         }
@@ -33,7 +32,7 @@ struct DailyValueSection: View {
     
     @ViewBuilder
     var sourceRow: some View {
-        if let source = dailyValue.source, let string = dailyValue.url {
+        if let source = rdi.source, let string = rdi.url {
             HStack {
                 Text("Source")
                 Spacer()

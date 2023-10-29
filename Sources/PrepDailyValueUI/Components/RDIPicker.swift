@@ -1,8 +1,7 @@
 import SwiftUI
 import PrepShared
-import PrepDailyValue
 
-struct DailyValuePicker: View {
+struct RDIPicker: View {
     
     let micro: Micro
     @State var model = Model()
@@ -14,8 +13,8 @@ struct DailyValuePicker: View {
     
     var body: some View {
         Form {
-            ForEach(micro.dailyValues, id: \.self) { dailyValue in
-                DailyValueSection(dailyValue: dailyValue)
+            ForEach(micro.rdis, id: \.self) {
+                RDISection(rdi: $0)
                     .environment(model)
             }
         }

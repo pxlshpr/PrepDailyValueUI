@@ -1,6 +1,5 @@
 import SwiftUI
 import PrepShared
-import PrepDailyValue
 import PrepSettings
 
 extension Settings {
@@ -80,12 +79,12 @@ struct MicroSettings: View {
                     MenuPicker($type)
                 }
                 switch type {
-                case .preset:
+                case .rdi:
                     NavigationLink {
-                        DailyValuePicker(micro: micro)
+                        RDIPicker(micro: micro)
                     } label: {
                         HStack {
-                            Text("Preset")
+                            Text("RDI")
                             Spacer()
                             Text("Choose")
                         }

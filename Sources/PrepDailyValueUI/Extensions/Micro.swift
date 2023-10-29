@@ -1,8 +1,7 @@
 import PrepShared
-import PrepDailyValue
 
 extension Micro {
-    var dailyValues: [DailyValue] {
+    var rdis: [RDI] {
         switch self {
         case .dietaryFiber:
             [fiber_eatRight, fiber_mayoClinic]
