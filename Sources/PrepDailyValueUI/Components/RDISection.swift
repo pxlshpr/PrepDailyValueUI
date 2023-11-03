@@ -20,16 +20,7 @@ struct RDISection: View {
         }
         .environment(\.openURL, OpenURLAction(handler: handleURL))
     }
-    
-    //TODO: use this to handle URL https://www.hackingwithswift.com/quick-start/swiftui/how-to-customize-the-way-links-are-opened
-    @ViewBuilder
-    var footer_: some View {
-        if let source = rdi.source, let url = rdi.url {
-//                Text("Source: [\(source.abbreviation)] \(url)")
-            Text("Source: [\(source.abbreviation)](\(url))")
-        }
-    }
-    
+        
     @ViewBuilder
     var sourceRow: some View {
         if let source = rdi.source, let string = rdi.url {

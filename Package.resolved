@@ -19,21 +19,12 @@
       }
     },
     {
-      "identity" : "prepdailyvalue",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/pxlshpr/PrepDailyValue",
-      "state" : {
-        "revision" : "8050d698146ca8c5831cff86605825435b161bc1",
-        "version" : "0.0.11"
-      }
-    },
-    {
       "identity" : "prepsettings",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pxlshpr/PrepSettings",
       "state" : {
-        "revision" : "200a6cb3873704196b30698773d1b9f2e056c887",
-        "version" : "0.0.2"
+        "revision" : "f3f6e6864ea94ec968a4f00f71ea643370722f5b",
+        "version" : "0.0.4"
       }
     },
     {
@@ -41,8 +32,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pxlshpr/PrepSettingsUI",
       "state" : {
-        "revision" : "e9a5d20085978c15cd1da04b9228c3d63332cbd1",
-        "version" : "0.0.1"
+        "revision" : "44b103c44454dab32663f05de1d2bba20c16cbd6",
+        "version" : "0.0.3"
       }
     },
     {
@@ -50,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pxlshpr/PrepShared",
       "state" : {
-        "revision" : "d1d558fa3b04148a7b7f39057451c2b988293495",
-        "version" : "0.0.141"
+        "revision" : "d2a4ce63753d7c1ba72bf728b4b1e3e63f0b0fb5",
+        "version" : "0.0.163"
       }
     },
     {
