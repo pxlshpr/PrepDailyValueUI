@@ -5,6 +5,8 @@ extension Micro {
         switch self {
         case .dietaryFiber:
             [fiber_eatRight, fiber_mayoClinic]
+        case .transFat:
+            [transFat_who]
         default:
             []
         }

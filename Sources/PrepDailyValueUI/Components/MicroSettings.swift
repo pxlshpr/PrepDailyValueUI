@@ -45,6 +45,7 @@ struct MicroSettings: View {
                 })
             }
             useDailyValueSection
+            valueSection
 //            dailValueSection
         }
         .navigationTitle(micro.name)
@@ -60,15 +61,12 @@ struct MicroSettings: View {
     }
     
     var useDailyValueSection: some View {
-        var footer: some View {
-            Text("The DV is used as a default when no goal is present.")
-        }
         
         var header: some View {
             Text("Daily Value (DV)")
         }
 
-        return Section(header: header, footer: footer) {
+        return Section(header: header) {
             Toggle(isOn: $useDailyValue, label: {
                 Text("Use")
             })
@@ -78,30 +76,50 @@ struct MicroSettings: View {
                     Spacer()
                     MenuPicker($type)
                 }
-                switch type {
-                case .rdi:
-                    NavigationLink {
-                        RDIPicker(micro: micro)
-                    } label: {
-                        HStack {
-                            Text("RDI")
-                                .foregroundStyle(.primary)
-                            Spacer()
-                            Text("Choose")
-                                .foregroundStyle(.tertiary)
-                        }
-                    }
-                case .custom:
+            }
+        }
+    }
+    
+    var valueSection: some View {
+        
+        var footer: some View {
+            Text("This is used as a default when no goal is set.")
+        }
+
+        return Section(footer: footer) {
+            switch type {
+            case .rdi:
+                NavigationLink {
+                    RDIPicker(micro: micro)
+                } label: {
                     HStack {
-                        Text("Minimum")
+                        Text("RDI")
+                            .foregroundStyle(.primary)
                         Spacer()
+                        Text("Choose")
+                            .foregroundStyle(.tertiary)
                     }
-                    HStack {
-                        Text("Maximum")
-                        Spacer()
-                    }
+                }
+            case .custom:
+                HStack {
+                    Text("Minimum")
+                    Spacer()
+                    Text(micro.defaultUnit.abbreviation)
+                        .foregroundStyle(.secondary)
+                }
+                HStack {
+                    Text("Maximum")
+                    Spacer()
+                    Text(micro.defaultUnit.abbreviation)
+                        .foregroundStyle(.secondary)
                 }
             }
         }
+    }
+}
+
+#Preview {
+    NavigationStack {
+        MicroSettings(.dietaryFiber, SettingsStore.shared)
     }
 }
